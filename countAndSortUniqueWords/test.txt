@@ -1,0 +1,3 @@
+Here is some text just to show what happens when we split by word to give us something to work with
+
+This is not very long but it does have some duplicate words
