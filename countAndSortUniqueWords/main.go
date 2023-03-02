@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 )
 
 func main() {
@@ -17,4 +18,23 @@ func main() {
 	}
 
 	fmt.Println(len(words), "unique words")
+
+	type kv struct {
+		key string
+		val int
+	}
+
+	var ss []kv
+
+	for k, v := range words {
+		ss = append(ss, kv{k, v})
+	}
+
+	sort.Slice(ss, func(i, j int) bool {
+		return ss[i].val > ss[j].val
+	})
+
+	for _, s := range ss[:5] {
+		fmt.Println(s.key, "appears", s.val, "times")
+	}
 }
