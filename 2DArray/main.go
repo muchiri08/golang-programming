@@ -14,8 +14,8 @@ func main() {
 	fmt.Println("Two Dimension Arrays in GO")
 
 	for i := 0; i < len(twoD); i++ {
-		row := twoD[i]
-		for j := 0; j < len(row); j++ {
+		col := twoD[i]
+		for j := 0; j < len(col); j++ {
 			result := fmt.Sprintf("[%d, %d] = %d", i, j, twoD[i][j])
 			fmt.Println(result)
 		}
