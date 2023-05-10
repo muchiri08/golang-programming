@@ -37,4 +37,11 @@ func main() {
 		fmt.Printf("usage: byLine <file1> [<file2> ...]\n")
 		return
 	}
+
+	for _, file := range flag.Args() {
+		err := lineByLine(file)
+		if err != nil {
+			fmt.Println(err)
+		}
+	}
 }
